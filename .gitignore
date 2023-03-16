@@ -1,0 +1,3 @@
+env/
+mylib/__pycache__/
+*.pyc

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Weather forecast</title>
+		
+
+	</head>
+
+	<body>
+		<h1>Hello user! This is a weather forecast app.</h1>
+		<form class="grid" action="/city_forecast" method="POST">
+			<label for="city">Which the city you are interested in? </label>
+			<select name="city" id="cars">
+				<option city="Paris">Paris</option>
+				<option city="Brussels">Brussels</option>
+				<option city="Lisbon">Lisbon</option>
+				<option city="London">London</option>
+				<option city="Athens">Athens</option>
+			</select>
+			<br><br>
+			<label for="forecast">What would you like to know?   </label>
+			<select name="forecast" id="cars">
+				<option forecast="temperature">temperature</option>
+				<option forecast="precipitation">precipitation</option>
+				<option forecast="windspeed">wind speed</option>
+				<option forecast="rel_humidity">relative humidity</option>
+			</select>
+			<br><br>
+			<center><input type="submit" value="Submit"></center>
+		</form>
+
+	</body>
+</html>

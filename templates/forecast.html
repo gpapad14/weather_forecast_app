@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Weather forecast</title>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="{{ url_for('static', filename = 'js/socket.js') }}"></script>
+		<h2>Et voila!</h2>
+		<p>This is the {{ forecastInput }} forecast of {{cityInput}} that you asked for.</p>
+		<p> Last update on: </p> 
+		<p id="ctime">{{ now }}  </p>
+
+		<center> <img  src={{plot}} alt="weather forecast graph" width="500px" height="auto"> </center>
+		<!-- id="plotid" -->
+		<br>
+
+		{% if forecastInput == "temperature" and onlytemp: %}
+			<form class="grid" action="/city_forecast+real_feel" method="POST">
+				<center><input type="submit" value="What really feels like?" > </center>
+			</form>
+		{% elif not(onlytemp): %}
+			<p>The ML model uses data of temperature, humidity, precipitation, and wind speed to predict the real feel temperature, aka apparent temperature. </p>
+		{% endif %}
+		<br>
+
+		<form> <center><input type="button" value="Back" onclick="history.go(-1)"></center> </form>
+
+	</body>
+</html>
