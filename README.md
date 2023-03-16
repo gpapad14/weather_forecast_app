@@ -10,3 +10,14 @@ This code was developed in Python 3.9.13.
 ```
 pip install --upgrade pip
 ```
+4. Install the necessary packages with the specific version they were used for this code.
+```
+pip install -r requirements.txt
+```
+5. You are now ready to start the app with:
+```
+python app.py
+```
+6. Use a browser to experience this application.
+
+The data are downloaded by [Open-Meteo weather forecast API](https://open-meteo.com/en/docs).
