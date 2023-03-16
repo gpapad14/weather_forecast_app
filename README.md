@@ -7,7 +7,7 @@ This code was developed in Python 3.9.13.
 1. Clone the git repository in your desired directory of your local unit and set current directory (cd) to the local repository.
 2. Upgrade your pip version.
 ```
-python3 -m pip install –upgrade pip
+python -m pip install --upgrade pip
 ```
 3. Create a virtual environment and activated.
 ```
