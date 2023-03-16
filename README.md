@@ -1,7 +1,7 @@
 # Weather forecast app using Python, Flask, Flask-SocketIO
-A weather forecast microservice with data from an API.
+This microservice allows the user to get the weather forecast of a city using data from an API. 
 
-## Properly use this code
+### Proper use of this code
 This code was developed in Python 3.9.13.
 
 1. Clone the directory in your local unit.
